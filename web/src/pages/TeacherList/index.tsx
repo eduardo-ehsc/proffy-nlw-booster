@@ -1,11 +1,11 @@
 import React from 'react';
 
-import PageHeader from '../../components/PageHeader';
-
 import './styles.css';
+
+import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
 import Input from '../../components/Input';
-
+import Select from '../../components/Select';
 
 function TeacherList() {
     return (
@@ -14,14 +14,37 @@ function TeacherList() {
                 title="Estes são os proffys disponíveis"
             >
                 <form id="search-teachers">
-                    <Input 
+                    <Select 
                         name="subject"
                         label="Matéria"
+                        options={[
+                            {value: 'Artes', label: 'Artes'},
+                            {value: 'Biologia', label: 'Biologia'},
+                            {value: 'Química', label: 'Química'},
+                            {value: 'Física', label: 'Física'},
+                            {value: 'Matemática', label: 'Matemática'},
+                            {value: 'Redação', label: 'Redação'},
+                            {value: 'Literatura', label: 'Literatura'},
+                            {value: 'Filosofia', label: 'Filosofia'},
+                            {value: 'Sociologia', label: 'Sociologia'},
+                            {value: 'História', label: 'História'},
+                            {value: 'Geografia', label: 'Geografia'},
+                            {value: 'Programação', label: 'Programação'},
+                        ]}
                     />
 
-                    <Input 
+                    <Select 
                         name="week_day"
-                        label="Dia da Semana"
+                        label="Dias da semana"
+                        options={[
+                            {value: '0', label: 'Domingo'},
+                            {value: '1', label: 'Segunda-feira'},
+                            {value: '2', label: 'Terça-feira'},
+                            {value: '3', label: 'Quarta-feira'},
+                            {value: '4', label: 'Quinta-feira'},
+                            {value: '5', label: 'Sexta-feira'},
+                            {value: '6', label: 'Sábado'},
+                        ]}
                     />
 
                     <Input 
