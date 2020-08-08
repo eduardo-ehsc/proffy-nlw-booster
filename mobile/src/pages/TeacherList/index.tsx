@@ -24,7 +24,7 @@ function TeacherList(){
                     <BorderlessButton
                         onPress={handleToggleFiltersVisible}
                     >
-                        <Feather name="filter" color="#fff"/>
+                        <Feather name="filter" color="#fff" size={32}/>
                     </BorderlessButton>
                 )}
             >
